@@ -8,6 +8,9 @@ experience but i think i can do it
 
 =======
 Adding a line to the readme file
+<<<<<<< HEAD
+Adding another line
+=======
 Babatunde is adding this line
 <<<<<<< HEAD
 Just trying to perfect git by adding more lines
