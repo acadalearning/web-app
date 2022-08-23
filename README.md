@@ -24,3 +24,7 @@ eight figures
 =======
 >>>>>>> refs/remotes/origin/master
 >>>>>>> b76e28961ab783ee2b4be083bb271e4bee7b9c4a
+
+Adding my own little contribution to the group huddle
+It was great pulling resources together
+There is no where i'd rather be. You rock guys!
