@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>maven-web-application</artifactId>
+	<artifactId>mvn-web-application</artifactId>
 	<packaging>war</packaging>
 	<version>2.0.7-SNAPSHOT</version>
 	
