@@ -29,3 +29,5 @@ Adding my own little contribution to the group huddle
 It was great pulling resources together
 There is no where i'd rather be. You rock guys!
 Today's date is 12-september-2022 and Kola is adding this line of feature.
+I have downloaded this master picture and i want to edit it, however i have created 
+a new branch so i dont messup the master branch. Thank you
