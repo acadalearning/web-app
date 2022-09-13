@@ -28,3 +28,4 @@ eight figures
 Adding my own little contribution to the group huddle
 It was great pulling resources together
 There is no where i'd rather be. You rock guys!
+Today's date is 12-september-2022 and Kola is adding this line of feature.
