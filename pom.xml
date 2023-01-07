@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://172.31.18.127:7000/</sonar.host.url>
+		<sonar.host.url>http://172.31.82.236:7000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Releases Nexus Repository</name>
-	      <url>http://172.31.85.41:8081/repository/new-project-release/</url>
+	      <url>http://172.31.76.207:8081/repository/Transcohot9-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Snapshot Nexus Repository </name>
-	      <url>http://172.31.85.41:8081/repository/new-project-snapshot/</url>
+	      <url>http://172.31.76.207:8081/repository/Transcohot9-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
