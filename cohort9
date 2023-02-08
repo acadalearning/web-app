@@ -30,7 +30,7 @@
     stage("5. Deploy to UAT"){
       steps{
         sh "echo deploy to UAT Environment"
-        deploy adapters: [tomcat9(credentialsId: 'Tomcat-cred', path: '', url: 'http://34.207.222.219:8080/')], contextPath: null, war: 'target/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'Tomcat-cred', path: '', url: 'http://34.204.76.132:8080/')], contextPath: null, war: 'target/*.war'
       }
     }
     stage("6. Approval"){
@@ -44,7 +44,7 @@
     stage("5. Deploy to Prod"){
       steps{
         sh "echo deploy to Prod Environment"
-        deploy adapters: [tomcat9(credentialsId: 'Tomcat-cred', path: '', url: 'http://34.207.222.219:8080/')], contextPath: null, war: 'target/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'Tomcat-cred', path: '', url: 'http://34.204.76.132:8080/')], contextPath: null, war: 'target/*.war'
       }
     }
     stage('8EmailNotification'){
