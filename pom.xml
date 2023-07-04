@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Releases Nexus Repository</name>
-	      <url>http://172.31.17.3:8081/repository/devops-release/</url>
+	      <url>http://3.143.240.122:8081/repository/devops-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Snapshot Nexus Repository </name>
-	      <url>http://172.31.17.3:8081/repository/devops-snapshot/</url>
+	      <url>http://3.143.240.122:8081/repository/devops-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
