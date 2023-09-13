@@ -8,7 +8,7 @@
 <link href="images/DP black.png" rel="icon">
 </head>
 </head>
-<body>
+//<body>
 <h1 align="center">Welcome to Acada Learning, Calgary, Canada Office.</h1>
 <h1 align="center">We are developing and supporting quality Software Solutions to millions of clients.
 	We offer Training for DevOps with Linux and Cloud equipping IT Engineers for best performance. God Loves you. Everyone will be hired with multiple job offers, Amen</h1>
