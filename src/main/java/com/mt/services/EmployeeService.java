@@ -28,6 +28,6 @@ public class EmployeeService {
 		js.put("Hobbies", "Reading Technical Blogs,Teaching, Changing lives..");
 		js.put("Places he like", "Africa, Church, His native place");
 
-		return js.toString();
+		
 }
 }
