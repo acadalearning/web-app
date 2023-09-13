@@ -28,10 +28,8 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 </h1>
 	
 <hr>
-
-	<span>
-		<img src="images/DP black.png" alt="" width="150">
-	</span>
+<div style="text-align: center;">
+	
 	<span style="font-weight: bold;">
                 Acada Learning, 
 		Calgary, Alberta, Canada
