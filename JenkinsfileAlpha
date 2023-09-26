@@ -1,0 +1,65 @@
+
+pipeline {
+  agent {label 'Nodes1'}
+  tools {
+    maven 'alpha_mvn'
+  }
+  environment {
+    DEPLOY_ENV = 'staging'
+    GIT_REPO_URL = 'https://github.com/AlphaMale01/web-app.git'
+  }
+  stages{
+    stage('Clone from Github'){
+      steps{
+        git "${GIT_REPO_URL}"
+      }
+    }
+    stage('Build'){
+      steps{
+        sh 'mvn package'
+      }
+    }
+    stage('Testing'){
+      steps{
+        sh 'mvn sonar:sonar'
+      }
+    }
+    stage('Nexus'){
+      steps{
+        sh 'mvn deploy'
+      }
+    }
+    stage('Approval'){
+      steps{
+        echo 'Seeking approval'
+        echo 'Sending email to team lead'
+        timeout(time: 5, unit: "DAYS"){
+          input message: 'Approve to deploy to production'
+        }
+      }
+    }
+    stage('Deployment stage'){
+      steps{
+        script {
+          if (env.DEPLOY_ENV == 'staging'){
+         deploy adapters: [tomcat9(credentialsId: 'Tomcat_Cred', path: '', url: 'http://54.197.23.151:9000/')], contextPath: null, war: 'target/*war'
+          }
+          else if (env.DEPLOY_ENV == 'production'){
+            echo 'Deploying to production tomcat'
+          }
+        }
+      }
+    }
+  }
+  post {
+    always {
+      echo "I am done"
+    }
+    success {
+      echo "Deploying to ${env.DEPLOY_ENV} tomcat successful"
+    }
+    failure {
+      echo "Deploying to ${env.DEPLOY_ENV} failed"
+    }
+  }
+}
