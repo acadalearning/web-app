@@ -121,6 +121,29 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.35.0</version>
+				<configuration>
+					<verbose>
+						<images>
+							<image>
+								<name>kbe-rest</name>
+								<build>
+									<assembly>
+										<descriptorRef>artifact</descriptorRef>
+									</assembly>
+									<dockerfile>Dockerfile</dockerfile>
+									<tags>
+										<tag>latest</tag>
+									</tags>
+								</build>
+							</image>
+						</images>
+					</verbose>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
