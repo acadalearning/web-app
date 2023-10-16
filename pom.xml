@@ -21,9 +21,9 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://172.31.60.77:9000/</sonar.host.url>
+		<sonar.host.url>http://172.31.94.226:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>admin</sonar.password>
+		<sonar.password>admin123</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -82,15 +82,7 @@
 			<version>${spring.version}</version>
 		</dependency>
 		
-		<!-- provided dependencies -->
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
-		
+		<!-- provided dependencies -->		
 	</dependencies>
 	
 	<distributionManagement>
@@ -121,30 +113,6 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>io.fabric8</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.35.0</version>
-				<configuration>
-					<verbose>
-						<images>
-							<image>
-								<name>kbe-rest</name>
-								<build>
-									<assembly>
-										<descriptorRef>artifact</descriptorRef>
-									</assembly>
-									<dockerfile>Dockerfile</dockerfile>
-									<tags>
-										<tag>latest</tag>
-									</tags>
-								</build>
-							</image>
-						</images>
-					</verbose>
-				</configuration>
-			</plugin>
-
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
