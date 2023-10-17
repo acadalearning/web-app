@@ -87,7 +87,7 @@
 	
 	<distributionManagement>
 	    <repository>
-	      <id>nexus3</id>
+	      <id>nexus</id>
 	      <name>ACADA Learning Releases Nexus Repository</name>
 	      <url>http://http://172.31.92.163:8081/repository/alpha_release/</url>
 	    </repository>
