@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        maven 'maven'
+        maven 'alpha_mvn'
     }
      environment {
     DEPLOY_ENV = 'staging'
