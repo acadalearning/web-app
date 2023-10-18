@@ -89,13 +89,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Releases Nexus Repository</name>
-	      <url>http://54.237.56.251:8081/repository/alpha_repo_release/</url>
+	      <url>http://172.31.56.17:8081/repository/alpha_repo_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Snapshot Nexus Repository </name>
-	      <url>http://54.237.56.251:8081/repository/alpha_repo_snapshot/</url>
+	      <url>http://172.31.56.17:8081/repository/alpha_repo_snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
