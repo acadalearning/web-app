@@ -1,0 +1,33 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven'
+    }
+    stages{
+        stage('cloning git'){
+			steps{
+				echo 'cloning starts'
+                git 'https://github.com/AlphaMale01/web-app.git'
+			}
+		}
+		stage('Building with maven'){
+			steps{
+				echo 'Building starts'
+                sh "mvn package"
+			}
+		}
+		stage('Testing with Sonarqube'){
+		    steps{
+		      echo 'Testing starts'
+		      sh "mvn sonar:sonar"
+		    }
+		}
+		stage('Deploying to Nexus'){
+		    steps{
+		        echo 'Deploying starts'
+		        sh "mvn deploy"
+		    }
+		}
+    }
+}
+         
