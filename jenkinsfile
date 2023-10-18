@@ -3,6 +3,10 @@ pipeline{
     tools{
         maven 'maven'
     }
+     environment {
+    DEPLOY_ENV = 'staging'
+    GIT_REPO_URL = 'https://github.com/AlphaMale01/web-app.git'
+  }
     stages{
         stage('cloning git'){
 			steps{
@@ -38,5 +42,16 @@ pipeline{
 		    }
 		}
     }
+  post {
+    always {
+      echo "I am done"
+    }
+    success {
+      echo "Deploying to ${env.DEPLOY_ENV} Nexus successful"
+    }
+    failure {
+      echo "Deploying to ${env.DEPLOY_ENV} failed"
+    }
+  }
 }
     
