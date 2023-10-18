@@ -16,6 +16,15 @@ pipeline{
                 sh "mvn package"
 			}
 		}
+    stage('Seeking Approval'){
+      steps{
+        echo 'Seeking approval'
+        echo 'Sending email to team lead'
+        timeout(time: 5, unit: "DAYS"){
+          input message: 'Approve to deploy to sonarqube'
+        }
+      }
+    }
 		stage('Testing with Sonarqube'){
 		    steps{
 		      echo 'Testing starts'
@@ -30,4 +39,4 @@ pipeline{
 		}
     }
 }
-         
+    
