@@ -93,7 +93,7 @@
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus3</id>
+	      <id>nexus</id>
 	      <name>ACADA Learning Snapshot Nexus Repository </name>
 	      <url>http://172.31.56.17:8081/repository/alpha_repo_snapshot/</url>
 	    </snapshotRepository>
